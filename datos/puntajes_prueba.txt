@@ -1,0 +1,5 @@
+Ana;150
+Luis;400
+Carl;250
+linea_sin_punto_y_coma
+Pedro;abc
