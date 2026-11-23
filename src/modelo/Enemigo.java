@@ -35,17 +35,13 @@ public abstract class Enemigo extends Entidad {
         return puntosAlDestruir;
     }
 
+    /** Cada tipo de enemigo define cómo se actualiza en cada ciclo. */
     @Override
-    public void actualizar() {
-        mover();
-    }
+    public abstract void actualizar();
 
-    /** Dibujo por defecto; las subclases lo sobrescriben. */
+    /** Cada tipo de enemigo define cómo se dibuja. */
     @Override
-    public void dibujar(Graphics g) {
-        g.setColor(Color.RED);
-        g.fillRect(x, y, ancho, alto);
-    }
+    public abstract void dibujar(Graphics g);
 
     /** Recibe impacto de disparos del jugador; si choca con la nave, se destruye. */
     @Override

@@ -14,8 +14,8 @@ import java.awt.Graphics;
  */
 public class Proyectil extends Entidad {
     
-    private boolean esDelJugador;
-    private int danio;
+   private boolean esDelJugador;
+    private int dano;
 
     /**
      * @param velY velocidad vertical (negativa = sube, positiva = baja)
@@ -24,7 +24,7 @@ public class Proyectil extends Entidad {
         super(x, y, 4, 12);
         this.velocidadY = velY;
         this.esDelJugador = esDelJugador;
-        this.danio = 1;
+        this.dano = 1;
     }
 
     @Override
@@ -47,8 +47,8 @@ public class Proyectil extends Entidad {
         return esDelJugador;
     }
 
-    public int getDanio() {
-        return danio;
+    public int getDano() {
+        return dano;
     }
 
     /** El proyectil se destruye al impactar con su objetivo. */
