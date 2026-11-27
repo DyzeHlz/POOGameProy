@@ -1,0 +1,8 @@
+AAA;1500
+BBB;1200
+CCC;900
+DDD;600
+EEE;300
+aa;1430
+carlos;50
+Carlos;2330
