@@ -8,7 +8,7 @@ import interfaces.Colisionable;
 import interfaces.Disparador;
 import java.awt.Color;
 import java.awt.Graphics;
-
+/** Nave controlada por el jugador: se mueve a los lados y dispara hacia arriba. */
 /**
  *
  * @author Carlos
@@ -34,7 +34,7 @@ public class NaveJugador extends Entidad implements Disparador {
             x = 0;
         }
     }
-
+ // Mueve a la derecha sin pasar del borde derecho (limiteAncho)
     public void moverDerecha(int limiteAncho) {
         x += velocidadX;
         if (x + ancho > limiteAncho) {
@@ -46,7 +46,7 @@ public class NaveJugador extends Entidad implements Disparador {
     @Override
     public void actualizar() {
     }
-
+// Dibuja un triángulo celeste: vértice arriba al centro y base abajo
     @Override
     public void dibujar(Graphics g) {
         g.setColor(new Color(0, 200, 255));

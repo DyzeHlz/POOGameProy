@@ -6,7 +6,7 @@ package modelo;
 
 import java.awt.Color;
 import java.awt.Graphics;
-
+/** Enemigo que patrulla de lado a lado; al tocar un borde cambia de dirección y baja. */
 /**
  *
  * @author Carlos
@@ -28,7 +28,7 @@ public class EnemigoFormacion extends Enemigo{
     public void actualizar() {
         mover();
     }
-
+ // Avanza en la dirección actual; si pasa un límite, se acomoda y rebota
     @Override
     public void mover() {
         x += direccionX * velocidadX;

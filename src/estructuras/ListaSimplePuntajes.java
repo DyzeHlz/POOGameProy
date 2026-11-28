@@ -7,7 +7,7 @@ package estructuras;
 import java.util.ArrayList;
 
 /**
- * Nodo de la lista enlazada simple de puntajes.
+ * Lista enlazada simple de puntajes, ordenada de mayor a menor.
  */
 /**
  *
@@ -17,7 +17,7 @@ public class ListaSimplePuntajes {
     
     private NodoPuntaje cabeza;
     private int tamano;
-
+// Lista vacía: no hay primer nodo y el tamaño es 0
     public ListaSimplePuntajes() {
         this.cabeza = null;
         this.tamano = 0;
@@ -32,8 +32,12 @@ public class ListaSimplePuntajes {
             nuevo.setSiguiente(cabeza);
             cabeza = nuevo;
         } else {
-            // Caso 2: buscar el nodo después del cual debe ir
+             // Caso 2: se recorre la lista hasta encontrar el nodo después del cual va
             NodoPuntaje actual = cabeza;
+            
+             // Avanza mientras el siguiente tenga puntaje igual o mayor
+            // (con >= los empates quedan en orden de llegada)
+            
             while (actual.getSiguiente() != null
                     && actual.getSiguiente().getDato().getPuntos() >= p.getPuntos()) {
                 actual = actual.getSiguiente();
@@ -43,7 +47,8 @@ public class ListaSimplePuntajes {
         }
         tamano++;
     }
-
+    
+     // true si no hay ningún nodo
     public boolean estaVacia() {
         return cabeza == null;
     }

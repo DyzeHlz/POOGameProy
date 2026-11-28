@@ -13,7 +13,7 @@ package estructuras;
 public class PuntajeJugador {
     private String nombre;
     private int puntos;
-
+    // Constructor que guarda los dos datos recibidos
     public PuntajeJugador(String nombre, int puntos) {
         this.nombre = nombre;
         this.puntos = puntos;

@@ -3,11 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package modelo;
-
 import interfaces.Colisionable;
-import java.awt.Color;
 import java.awt.Graphics;
-
+/** Clase base abstracta de los enemigos (torreta y formación). */
 /**
  *
  * @author Carlos
@@ -16,7 +14,7 @@ public abstract class Enemigo extends Entidad {
     
     protected int puntosAlDestruir;
     protected int resistencia;
-
+    // Constructor que pasa posición y tamaño a Entidad; aguanta 1 impacto por defecto
     public Enemigo(int x, int y, int ancho, int alto, int pts) {
         super(x, y, ancho, alto);
         this.puntosAlDestruir = pts;

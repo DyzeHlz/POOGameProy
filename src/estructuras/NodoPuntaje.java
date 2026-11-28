@@ -4,7 +4,7 @@
  */
 package estructuras;
 /**
- * Nodo de la lista enlazada simple de puntajes.
+ * Nodo de la lista enlazada: guarda un puntaje y apunta al siguiente nodo.
  */
 /**
  *
@@ -12,8 +12,8 @@ package estructuras;
  */
 public class NodoPuntaje {
     private PuntajeJugador dato;
-    private NodoPuntaje siguiente;
-
+    private NodoPuntaje siguiente; // el nodo que sigue (null si es el último
+// Constructor que crea un nodo con su dato y sin siguiente todavía
     public NodoPuntaje(PuntajeJugador dato) {
         this.dato = dato;
         this.siguiente = null;
@@ -26,7 +26,7 @@ public class NodoPuntaje {
     public NodoPuntaje getSiguiente() {
         return siguiente;
     }
-
+ // Enlaza este nodo con otro (así se arma la cadena)
     public void setSiguiente(NodoPuntaje sig) {
         this.siguiente = sig;
     }

@@ -7,7 +7,7 @@ package modelo;
 import interfaces.Disparador;
 import java.awt.Color;
 import java.awt.Graphics;
-
+/** Enemigo que baja hasta una altura fija y se queda disparando. */
 /**
  *
  * @author Carlos
@@ -23,7 +23,7 @@ public class EnemigoTorreta extends Enemigo implements Disparador {
         this.yObjetivo = yDestino;
         this.posicionado = false;
         this.intervaloDisparoMs = 1500;
-        this.ultimoDisparo = System.currentTimeMillis();
+        this.ultimoDisparo = System.currentTimeMillis();// cuenta desde que aparece
         this.velocidadY = 2;
         this.resistencia = 3;
     }
@@ -56,7 +56,7 @@ public class EnemigoTorreta extends Enemigo implements Disparador {
         return posicionado
                 && System.currentTimeMillis() - ultimoDisparo >= intervaloDisparoMs;
     }
-
+    
     @Override
     public void dibujar(Graphics g) {
         g.setColor(Color.DARK_GRAY);

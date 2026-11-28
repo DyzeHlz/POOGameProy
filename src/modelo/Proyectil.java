@@ -7,7 +7,7 @@ package modelo;
 import interfaces.Colisionable;
 import java.awt.Color;
 import java.awt.Graphics;
-
+/** Disparo lanzado por la nave del jugador o por una torreta. */
 /**
  *
  * @author Carlos

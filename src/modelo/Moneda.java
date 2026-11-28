@@ -7,7 +7,7 @@ package modelo;
 import interfaces.Colisionable;
 import java.awt.Color;
 import java.awt.Graphics;
-
+/** Moneda que cae lentamente; al recogerla la nave suma puntos. */
 /**
  *
  * @author Carlos

@@ -17,7 +17,7 @@ import modelo.Entidad;
 import modelo.Moneda;
 import modelo.NaveJugador;
 import modelo.Proyectil;
-
+/** Lógica del juego: entidades, colisiones, puntaje y guardado. */
 /**
  *
  * @author Carlos
@@ -31,7 +31,7 @@ public class MotorJuego {
     private int anchoEscenario;
     private int altoEscenario;
     private boolean juegoTerminado;
-
+ // Prepara las listas y el archivo, carga los puntajes y deja lista la primera partida
     public MotorJuego(int ancho, int alto) {
         this.anchoEscenario = ancho;
         this.altoEscenario = alto;
@@ -226,18 +226,18 @@ public class MotorJuego {
     /**
      * Deja el nombre listo para guardarlo: sin ';' ni saltos de línea
      * (romperían el archivo), sin espacios en los extremos, máximo 10
-     * caracteres y "ANON" si queda vacío.
+     * caracteres y "NULL" si queda vacío.
      */
     private String limpiarNombre(String nombre) {
         if (nombre == null) {
-            return "ANON";
+            return "NULL";
         }
         String limpio = nombre.replaceAll("[;\\r\\n]", "").trim();
         if (limpio.length() > 10) {
             limpio = limpio.substring(0, 10).trim();
         }
         if (limpio.isEmpty()) {
-            return "ANON";
+            return "NULL";
         }
         return limpio;
     }

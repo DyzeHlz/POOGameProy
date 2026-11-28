@@ -17,13 +17,14 @@ import javax.swing.JPanel;
 import modelo.Entidad;
 import modelo.NaveJugador;
 import modelo.Proyectil;
+/** Panel donde se juega: dibuja el escenario, lee el teclado y repite el ciclo con un Timer. */
 /**
  *
  * @author Carlos
  */
 public class PanelJuego extends JPanel implements ActionListener, KeyListener  {
     private MotorJuego motor;
-    private javax.swing.Timer timerBucle;
+    private javax.swing.Timer timerBucle;   // dispara actionPerformed cada 16 ms
     private boolean izquierdaPresionada;
     private boolean derechaPresionada;
     private boolean disparoPresionado;
@@ -62,7 +63,7 @@ public class PanelJuego extends JPanel implements ActionListener, KeyListener  {
     // ------------------------------------------------------------------
     // Dibujo
     // ------------------------------------------------------------------
-
+// Dibujo: Swing lo llama cada vez que se hace repaint()
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);

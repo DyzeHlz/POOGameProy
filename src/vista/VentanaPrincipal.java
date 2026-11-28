@@ -16,7 +16,7 @@ import javax.swing.table.DefaultTableModel;
  * @author Carlos
  */
 public class VentanaPrincipal extends javax.swing.JFrame {
-    
+    // Registro de errores    
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName());
 
     /**

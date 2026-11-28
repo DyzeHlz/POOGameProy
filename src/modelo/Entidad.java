@@ -17,6 +17,7 @@ import java.awt.Rectangle;
  * @author Carlos
  */
 public abstract class Entidad implements Movible, Colisionable {
+    // Posición (esquina superior izquierda) y tamaño en píxeles
     protected int x;
     protected int y;
     protected int ancho;
@@ -24,7 +25,7 @@ public abstract class Entidad implements Movible, Colisionable {
     protected int velocidadX;
     protected int velocidadY;
     protected boolean activa;
-
+    // Guarda posición y tamaño; empieza quieta (velocidad 0) y activa
     public Entidad(int x, int y, int ancho, int alto) {
         this.x = x;
         this.y = y;
